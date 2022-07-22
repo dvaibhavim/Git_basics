@@ -1,0 +1,51 @@
+git log
+
+git log --oneline --graph --decorate --color
+* f0e833b (HEAD -> master, origin/master, origin/HEAD) added git commands basic
+* 9c93c72 Initial commit
+
+##########
+rm info.txt
+vaibdeshpande@LM-MAA-40527407 Git-crash-course % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+##########
+to remove files from git git add does not work we need to add -u
+git add -u
+
+
+##############
+ git mv Commands web
+
+vaibdeshpande@LM-MAA-40527407 Git-crash-course % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    Commands -> web/Commands
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   notes
+
+vaibdeshpande@LM-MAA-40527407 Git-crash-course % git commit -m "Moving commands file to web folder"
+[master 1812f4d] Moving commands file to web folder
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename Commands => web/Commands (100%)
+
+##############
+
+vaibdeshpande@LM-MAA-40527407 Git-crash-course % which git
+/usr/bin/git
+vaibdeshpande@LM-MAA-40527407 Git-crash-course % git version
+git version 2.24.3 (Apple Git-128)
